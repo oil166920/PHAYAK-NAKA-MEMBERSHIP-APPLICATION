@@ -1,46 +1,85 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>พยัคฆ์นาคา</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>พยัคฆ์นาคา</title>
 
-<style>
-body{
-  margin:0;
-  background:transparent;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-.logo{
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  overflow:hidden;
-  background:#000;
-  border:4px solid #d4af37;
-  box-shadow:0 0 25px rgba(212,175,55,.55);
-}
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050505;
+      font-family: Arial, sans-serif;
+    }
 
-.logo img{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-}
-</style>
+    .logo-wrapper {
+      text-align: center;
+    }
+
+    .logo {
+      width: 220px;
+      height: 220px;
+      margin: auto;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #000;
+      border: 4px solid #d4af37;
+      box-shadow:
+        0 0 15px rgba(212, 175, 55, 0.7),
+        0 0 45px rgba(212, 175, 55, 0.25);
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .title {
+      margin-top: 18px;
+      color: #d4af37;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="logo">
-<img
-src="data:image/jpeg;base64,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"
-alt="พยัคฆ์นาคา">
-</div>
+  <div class="logo-wrapper">
+
+    <div class="logo">
+      <img
+        src="https://cdn.imagetourls.com/uploads/tyImg/l6FD0lgD.png"
+        alt="พยัคฆ์นาคา"
+      >
+    </div>
+
+    <div class="title">
+      พยัคฆ์นาคา
+    </div>
+
+    <div class="subtitle">
+      เสือที่มีนาคาคอยปกปัก
+    </div>
+
+  </div>
 
 </body>
 </html>
