@@ -430,7 +430,7 @@ function shareFacebook() {
 
 
   const url =
-    `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}&quote=${text}`;
+"https://www.facebook.com/xxy.wirburus.chud.kuphay?";
 
 
   window.open(
