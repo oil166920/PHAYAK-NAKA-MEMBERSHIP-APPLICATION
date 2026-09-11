@@ -3,83 +3,766 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>พยัคฆ์นาคา</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <title>พยัคฆ์นาคา | ระบบสมัครสมาชิก</title>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #050505;
-      font-family: Arial, sans-serif;
-    }
-
-    .logo-wrapper {
-      text-align: center;
-    }
-
-    .logo {
-      width: 220px;
-      height: 220px;
-      margin: auto;
-      border-radius: 50%;
-      overflow: hidden;
-      background: #000;
-      border: 4px solid #d4af37;
-      box-shadow:
-        0 0 15px rgba(212, 175, 55, 0.7),
-        0 0 45px rgba(212, 175, 55, 0.25);
-    }
-
-    .logo img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    .title {
-      margin-top: 18px;
-      color: #d4af37;
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    .subtitle {
-      margin-top: 8px;
-      color: #aaa;
-      font-size: 14px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="logo-wrapper">
+<!-- ================= HEADER ================= -->
 
-    <div class="logo">
+<header class="header">
+
+  <div class="brand">
+
+    <img
+      class="brand-logo"
+      src="https://cdn.imagetourls.com/uploads/tyImg/l6FD0lgD.png"
+      alt="พยัคฆ์นาคา"
+      onerror="this.style.display='none';"
+    >
+
+    <div>
+      <h1>พยัคฆ์นาคา</h1>
+      <span>ระบบสมัครสมาชิก</span>
+    </div>
+
+  </div>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="navigation">
+
+    <a href="#home">หน้าแรก</a>
+    <a href="#about">เกี่ยวกับ</a>
+    <a href="#ranks">ยศ</a>
+    <a href="#rules">กฎ</a>
+    <a href="#apply">สมัครสมาชิก</a>
+    <a href="#contact">ติดต่อ</a>
+
+  </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-logo">
+
       <img
         src="https://cdn.imagetourls.com/uploads/tyImg/l6FD0lgD.png"
         alt="พยัคฆ์นาคา"
       >
+
     </div>
 
-    <div class="title">
+    <p class="small-title">
+      PHAYAK NAKA
+    </p>
+
+    <h2>
       พยัคฆ์นาคา
+    </h2>
+
+    <p class="hero-description">
+      เสือที่มีนาคาคอยปกปัก
+    </p>
+
+    <div class="hero-motto">
+      “สัตย์เหนือชีวิต — เกียรติเหนือสิ่งใด”
     </div>
 
-    <div class="subtitle">
-      เสือที่มีนาคาคอยปกปัก
+    <div class="hero-buttons">
+
+      <a href="#apply" class="btn primary">
+        สมัครสมาชิก
+      </a>
+
+      <a href="#about" class="btn secondary">
+        ดูข้อมูล
+      </a>
+
     </div>
 
   </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>ABOUT</span>
+
+      <h2>เกี่ยวกับพยัคฆ์นาคา</h2>
+
+      <p>
+        พื้นที่แห่งคำสัตย์ เกียรติ ความสามัคคี
+        และการเคารพซึ่งกันและกัน
+      </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+      <div class="info-card">
+
+        <div class="icon">🐯</div>
+
+        <h3>พยัคฆ์</h3>
+
+        <p>
+          หมายถึงความกล้าหาญ ความแข็งแกร่ง
+          และการยืนหยัดในสิ่งที่ถูกต้อง
+        </p>
+
+      </div>
+
+
+      <div class="info-card">
+
+        <div class="icon">🐍</div>
+
+        <h3>นาคา</h3>
+
+        <p>
+          หมายถึงการปกปักรักษา ความลึกลับ
+          และพลังแห่งการคุ้มครอง
+        </p>
+
+      </div>
+
+
+      <div class="info-card">
+
+        <div class="icon">⚜️</div>
+
+        <h3>คำสัตย์</h3>
+
+        <p>
+          สิ่งที่อยู่เหนือยศ ชื่อเสียง
+          และสิ่งอื่นใด
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOUNDER ================= -->
+
+<section class="founder-section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>FOUNDER</span>
+
+      <h2>ผู้ก่อตั้ง</h2>
+
+    </div>
+
+
+    <div class="founder-card">
+
+      <div class="founder-symbol">
+        🐯
+      </div>
+
+      <div>
+
+        <p class="label">
+          ผู้ก่อตั้งพยัคฆ์นาคา
+        </p>
+
+        <h2>
+          ณัฐวัตร ชูปรารมย์
+        </h2>
+
+        <p>
+          ชื่อเล่น: <strong>ออย</strong>
+        </p>
+
+        <p>
+          ฉายา: <strong>“เสือดำนาคา”</strong>
+        </p>
+
+        <p>
+          ตำแหน่ง: <strong>เจ้าพยัคฆ์คนแรก</strong>
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= RANKS ================= -->
+
+<section id="ranks" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>RANK SYSTEM</span>
+
+      <h2>ระบบยศ</h2>
+
+      <p>
+        ลำดับยศของเหล่าพยัคฆ์
+      </p>
+
+    </div>
+
+
+    <div class="rank-grid" id="rankList"></div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= RULES ================= -->
+
+<section id="rules" class="section dark-section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>THE OATH</span>
+
+      <h2>กฎแห่งคำสัตย์</h2>
+
+    </div>
+
+
+    <div class="rules-list">
+
+      <div class="rule">
+        <b>01</b>
+        <span>คำสัตย์ต้องมาก่อน</span>
+      </div>
+
+      <div class="rule">
+        <b>02</b>
+        <span>เหล่าพยัคฆ์ต้องไม่ทอดทิ้งกัน</span>
+      </div>
+
+      <div class="rule">
+        <b>03</b>
+        <span>ห้ามหักหลัง</span>
+      </div>
+
+      <div class="rule">
+        <b>04</b>
+        <span>รักษาเกียรติของกลุ่ม</span>
+      </div>
+
+      <div class="rule">
+        <b>05</b>
+        <span>ไม่รังแกผู้ไม่มีทางสู้</span>
+      </div>
+
+      <div class="rule">
+        <b>06</b>
+        <span>เคารพยศและหน้าที่</span>
+      </div>
+
+      <div class="rule">
+        <b>07</b>
+        <span>ไม่มีใครใหญ่กว่าคำสัตย์</span>
+      </div>
+
+    </div>
+
+
+    <div class="oath-box">
+
+      <h3>คำปฏิญาณ</h3>
+
+      <p>
+        ข้าคือหนึ่งในเหล่าพยัคฆ์
+        จะรักษาคำสัตย์ ไม่ทรยศพวกพ้อง
+        ไม่ใช้กำลังรังแกผู้บริสุทธิ์
+        และจะรักษาเกียรติของพยัคฆ์นาคา
+        ตราบเท่าที่ข้ายังยืนหยัดอยู่
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= APPLICATION ================= -->
+
+<section id="apply" class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>MEMBERSHIP</span>
+
+      <h2>สมัครสมาชิก</h2>
+
+      <p>
+        กรอกข้อมูลให้ครบถ้วนเพื่อส่งใบสมัคร
+      </p>
+
+    </div>
+
+
+    <div class="application-wrapper">
+
+
+      <form id="applicationForm">
+
+
+        <!-- PERSONAL -->
+
+        <div class="form-section">
+
+          <h3>ข้อมูลผู้สมัคร</h3>
+
+          <div class="form-grid">
+
+            <div class="field">
+
+              <label>
+                ชื่อ - นามสกุล *
+              </label>
+
+              <input
+                id="fullName"
+                type="text"
+                required
+                placeholder="กรอกชื่อ - นามสกุล"
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                ชื่อเล่น *
+              </label>
+
+              <input
+                id="nickname"
+                type="text"
+                required
+                placeholder="กรอกชื่อเล่น"
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                ฉายา / นามเรียก
+              </label>
+
+              <input
+                id="alias"
+                type="text"
+                placeholder="ถ้ามี"
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                อายุ *
+              </label>
+
+              <input
+                id="age"
+                type="number"
+                min="1"
+                max="120"
+                required
+                placeholder="อายุ"
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                จังหวัด *
+              </label>
+
+              <input
+                id="province"
+                type="text"
+                required
+                placeholder="จังหวัด"
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                ช่องทางติดต่อ
+              </label>
+
+              <input
+                id="contact"
+                type="text"
+                placeholder="Facebook / Line / อื่น ๆ"
+              >
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- MEMBERSHIP -->
+
+        <div class="form-section">
+
+          <h3>ข้อมูลการสมัคร</h3>
+
+
+          <div class="field">
+
+            <label>
+              เหตุผลที่ต้องการเข้าร่วม *
+            </label>
+
+            <textarea
+              id="reason"
+              required
+              placeholder="เขียนเหตุผลของคุณ"
+            ></textarea>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              ยศที่ต้องการสมัคร
+            </label>
+
+            <select id="desiredRank">
+
+              <option value="ลูกนาคา">
+                ลูกนาคา
+              </option>
+
+              <option value="นาคาน้อย">
+                นาคาน้อย
+              </option>
+
+              <option value="เสือเดช">
+                เสือเดช
+              </option>
+
+              <option value="เสือคม">
+                เสือคม
+              </option>
+
+              <option value="เสือกล้า">
+                เสือกล้า
+              </option>
+
+              <option value="เสือเงา">
+                เสือเงา
+              </option>
+
+              <option value="เสือพิทักษ์">
+                เสือพิทักษ์
+              </option>
+
+              <option value="เสือหลวง">
+                เสือหลวง
+              </option>
+
+              <option value="นาคาธิป">
+                นาคาธิป
+              </option>
+
+              <option value="เจ้าพยัคฆ์">
+                เจ้าพยัคฆ์
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <!-- AGREEMENT -->
+
+        <div class="form-section">
+
+          <h3>คำรับรอง</h3>
+
+
+          <label class="checkbox">
+
+            <input
+              type="checkbox"
+              id="agreeRules"
+              required
+            >
+
+            <span>
+              ข้าพเจ้ายอมรับและจะปฏิบัติตามกฎแห่งพยัคฆ์นาคา
+            </span>
+
+          </label>
+
+
+          <label class="checkbox">
+
+            <input
+              type="checkbox"
+              id="agreeData"
+              required
+            >
+
+            <span>
+              ข้าพเจ้ายืนยันว่าข้อมูลที่กรอกเป็นข้อมูลของข้าพเจ้า
+            </span>
+
+          </label>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="submit-button"
+        >
+          🐯 ส่งใบสมัคร
+        </button>
+
+
+      </form>
+
+
+      <!-- SUCCESS -->
+
+      <div
+        id="successBox"
+        class="success-box hidden"
+      >
+
+        <div class="success-icon">
+          ✓
+        </div>
+
+        <h2>
+          สมัครเสร็จแล้ว
+        </h2>
+
+        <p>
+          ระบบได้รับใบสมัครของคุณเรียบร้อยแล้ว
+        </p>
+
+
+        <div class="application-number">
+
+          <span>
+            เลขที่ใบสมัคร
+          </span>
+
+          <strong id="applicationId">
+            -
+          </strong>
+
+        </div>
+
+
+        <div
+          id="summary"
+          class="summary"
+        ></div>
+
+
+        <div class="success-buttons">
+
+          <button
+            onclick="copyApplication()"
+            class="btn primary"
+          >
+            📋 คัดลอกข้อมูล
+          </button>
+
+
+          <button
+            onclick="shareFacebook()"
+            class="btn secondary"
+          >
+            Facebook
+          </button>
+
+
+          <button
+            onclick="sharePage()"
+            class="btn secondary"
+          >
+            ส่งให้เพจ
+          </button>
+
+
+          <button
+            onclick="shareApplication()"
+            class="btn secondary"
+          >
+            แชร์
+          </button>
+
+        </div>
+
+
+        <button
+          onclick="newApplication()"
+          class="new-application"
+        >
+          สมัครรายการใหม่
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>CONTACT</span>
+
+      <h2>ติดต่อ</h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <span>🐯</span>
+
+        <h3>พยัคฆ์นาคา</h3>
+
+        <p>
+          เสือที่มีนาคาคอยปกปัก
+        </p>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <span>📜</span>
+
+        <h3>คำขวัญ</h3>
+
+        <p>
+          สัตย์เหนือชีวิต — เกียรติเหนือสิ่งใด
+        </p>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <span>⚜️</span>
+
+        <h3>เสียงเรียก</h3>
+
+        <p>
+          พยัคฆ์ยังอยู่ — นาคายังเฝ้า
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="footer-logo">
+
+    <img
+      src="https://cdn.imagetourls.com/uploads/tyImg/l6FD0lgD.png"
+      alt="พยัคฆ์นาคา"
+    >
+
+  </div>
+
+  <h3>
+    พยัคฆ์นาคา
+  </h3>
+
+  <p>
+    เสือที่มีนาคาคอยปกปัก
+  </p>
+
+  <p class="footer-motto">
+    “สัตย์เหนือชีวิต — เกียรติเหนือสิ่งใด”
+  </p>
+
+  <small>
+    ระบบสมาชิกเพื่อชุมชนและโปรเจกต์สร้างสรรค์
+  </small>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
