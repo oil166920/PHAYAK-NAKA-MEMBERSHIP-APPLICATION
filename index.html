@@ -1,0 +1,33 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080808"><title>ใบสมัครสมาชิก | พยัคฆ์นาคา</title><link rel="stylesheet" href="style.css"></head><body><header><img src="assets/logo.jpeg"><div><small>PHAYAK NAKA • MEMBERSHIP</small><h1>ใบสมัครสมาชิก<br><b>เหล่าพยัคฆ์</b></h1><p>พยัคฆ์นาคา — เสือที่มีนาคาคอยปกปัก</p></div></header><main><div class="motto">สัตย์เหนือชีวิต — เกียรติเหนือสิ่งใด</div><form id="f"><section><h2>01 ข้อมูลผู้สมัคร</h2><div class="grid"><label>ชื่อ–นามสกุล *<input name="name" required></label><label>ชื่อเล่น *<input name="nickname" required></label><label>ฉายา / นามเรียกขาน<input name="alias"></label><label>อายุ *<input name="age" type="number" min="1" max="120" required></label><label>จังหวัด *<input name="province" required></label><label>ช่องทางติดต่อ *<input name="contact" placeholder="Facebook / LINE / อื่น ๆ" required></label></div></section><section><h2>02 ข้อมูลการสมัคร</h2><label>เหตุผลที่ต้องการเข้าร่วม *<textarea name="reason" rows="4" required></textarea></label><label>ยศที่ต้องการสมัคร<select name="rank"><option>ลูกนาคา (LN)</option><option>นาคาน้อย (NN)</option><option>เสือเดช (SD)</option><option>เสือคม (SC)</option><option>เสือกล้า (SK)</option><option>เสือเงา (SH)</option><option>เสือพิทักษ์ (SP)</option><option>เสือหลวง (SL)</option><option>นาคาธิป (NT)</option><option>ให้ผู้ดูแลพิจารณา</option></select></label></section><section><h2>03 เงื่อนไขการสมัคร</h2><ul><li>จริงใจและให้เกียรติสมาชิกทุกคน</li><li>ปฏิบัติตามกฎของพยัคฆ์นาคา</li><li>รักษาคำสัตย์ ไม่หักหลัง ไม่สร้างความแตกแยก</li><li>ไม่ดูหมิ่น กลั่นแกล้ง ข่มขู่ หรือรังแกผู้อื่น</li><li>ไม่ใช้ชื่อพยัคฆ์นาคาเพื่อก่อเหตุหรือกระทำผิดกฎหมาย</li><li>ข้อมูลสมัครต้องเป็นความจริง</li><li>การรับเข้าและการกำหนดยศขึ้นอยู่กับการพิจารณา</li></ul><label class="check"><input type="checkbox" name="agree" required> ข้าพเจ้าอ่านและยอมรับเงื่อนไขทั้งหมด</label></section><section><h2>04 ยืนยัน</h2><label class="check"><input type="checkbox" name="truth" required> ข้าพเจ้ารับรองว่าข้อมูลที่กรอกถูกต้อง</label><button>ส่งใบสมัคร →</button></section></form><section id="ok" class="success" hidden>
+<div class="tick">✓</div><small>APPLICATION RECEIVED</small>
+<h2>สมัครเสร็จแล้ว</h2><p>ระบบรับใบสมัครและสร้างเลขใบสมัครเรียบร้อย</p>
+<div class="id"><small>เลขใบสมัคร</small><strong id="id"></strong></div>
+<div class="quick"><b>สรุปข้อมูลเบื้องต้น</b><div id="sum"></div></div>
+<div class="actions">
+<button id="copy">คัดลอกข้อมูลทั้งหมด</button>
+<button id="share">แชร์หน้าสมัคร</button>
+<a id="fbPersonal" target="_blank" rel="noopener">ส่งไป Facebook</a>
+<a id="fbPage" target="_blank" rel="noopener">ส่งให้เพจ</a>
+</div>
+<p class="tip">กด “คัดลอกข้อมูลทั้งหมด” แล้วนำไปวางในข้อความ Facebook หรือข้อความถึงเพจ เพื่อส่งรายละเอียดให้ผู้ดูแลตรวจสอบ</p>
+<button id="new" class="again">สมัครใหม่</button>
+</section>
+</main>
+<section id="adminPage" class="adminPage" hidden>
+  <div class="admin-head">
+    <div><small>PHAYAK NAKA • ADMIN</small><h2>ระบบจัดการใบสมัคร</h2><p>ตรวจสอบรายละเอียดผู้สมัครจากเครื่องนี้</p></div>
+    <button id="adminLogout" class="again">ออกจากระบบ</button>
+  </div>
+  <div id="adminLogin" class="admin-login">
+    <h3>เข้าสู่ระบบแอดมิน</h3>
+    <label>ชื่อผู้ใช้<input id="adminUser" value="admin" autocomplete="username"></label>
+    <label>รหัสผ่าน<input id="adminPass" type="password" placeholder="รหัสผ่าน"></label>
+    <button id="adminLoginBtn">เข้าสู่ระบบ</button>
+    <p class="tip">บัญชีเริ่มต้นดูได้ใน README ของไฟล์ ZIP</p>
+  </div>
+  <div id="adminPanel" hidden>
+    <div class="admin-tools"><b id="adminCount">0 ใบสมัคร</b><button id="clearApps" class="danger">ล้างข้อมูลในเครื่อง</button></div>
+    <div id="applications"></div>
+  </div>
+</section>
+<footer>พยัคฆ์นาคา • สัตย์เหนือชีวิต — เกียรติเหนือสิ่งใด</footer><script src="script.js"></script></body></html>
